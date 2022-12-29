@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Little Bird</title>
+
+        <!-- Random Stuff -->
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="(Add description here)">
+
+        <!-- Refers Google to HTTPS (instead of HTTP) -->
+        <!--<link rel="canonical" href="https://littlebird.com"/>-->
+        
+        <!-- Icon -->
+        <link rel="icon" href="Logos/logo.ico">
+        
+        <!-- Google font: Poppins -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600;700&display=swap" rel="stylesheet">
+            
+        <!-- Stylesheet -->
+        <link href="stylesheet.css" rel="stylesheet" type="text/css">
+        <link href="slideshow.css" rel="stylesheet" type="text/css">
+        
+        <!-- Icon Library -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+
+    <body id="body" class="light-mode">
+
+        <!-- Main Div -->
+        <div id="myDiv" class="animate-bottom">
+            
+            <!-- Topnav bar -->
+            <div class="topnav">
+                <!-- Clickable Logo -->
+                <a href=#home style="width: 15%;"><img id="logoimg" src="Logos/logowhite.png" alt="Little Bird's Logo"></a>
+
+                <!--Dropdown menu -->
+                <div class="dropdown">
+                    <button onclick="myFunction()" class="dropbtn"><img id="dropimg" src="Images/drop2.png" alt="Little Bird's Dropdown Button"></button>
+                        <div id="myDropdown" class="dropdown-content">
+                            <!-- Dark/Light Toggle Button -->
+                            <!--<a id="dltoggle" name="dark_light" onclick="toggleDarkLight()" title="Toggle dark/light mode"><img name="sun" src="Images/sun2.png" width="50" height="50"></a>-->
+                            <a class="dropbtncurrent">HOME</a>
+                            <a href="#contact" class="dropbtn">CONTACT US</a>
+                            <!-- <button class="hometomapbtndark" style="font-size: 15px; padding: 10px 15px; font-weight: 500;"
+                            onclick="window.open('https://7gh5ta51vgo.typeform.com/to/n3eDFEmc', '_self')">
+                            Become a member!
+                            </button> -->
+                            <br>           
+                        </div>
+                </div>
+            </div>
+
+            <!-- Scroll to top button -->
+            <button onclick="topFunction()" id="topbtn"><img src="Images/up.png" class="topimg" alt="Little Bird's Back to Top Button"></button>
+            
+            <!-- Contribute Button -->
+            <button id="contributebtn" onclick=" window.open('https://www.instagram.com/littlebirdfdn','_blank')">
+                <span class="shadow"></span>
+                <span class="edge"></span>
+                <span class="front">
+                    <i class="fa fa-heart"></i> Join Raffle!
+                </span>
+            </button>
+            
+
+            <!-- Title Screen -->
+            <!--<section id="home">-->
+            <div id="home" style="background-image: url(Images/home2.jpg); background-repeat: no-repeat; background-attachment: fixed; background-position: center; background-size: cover;">
+              <br><br><br><br><br><br><br><br><br><br>
+
+                <!-- Semi-Title -->
+                <p class="homesemititle">WELCOME TO</p>
+
+                <!-- Title -->
+                <p class="hometitle">LITTLE BIRD</p>
+
+                 <!-- Title Description -->
+                <p class="hometitledescrip">FOUNDATION</p>
+                
+                <br><br><br><br>
+
+                <!-- Down Button -->
+                <a href="#about"><img src="Images/down.png" class="downbtn" alt="Little Bird's Next Section Button"></a>
+
+                <svg viewBox="0 0 1440 320" style="display: block;">
+                  <path fill="white" fill-opacity="1" d="M0,160L26.7,149.3C53.3,139,107,117,160,128C213.3,139,267,181,320,218.7C373.3,256,427,288,480,293.3C533.3,299,587,277,640,256C693.3,235,747,213,800,224C853.3,235,907,277,960,293.3C1013.3,309,1067,299,1120,266.7C1173.3,235,1227,181,1280,170.7C1333.3,160,1387,192,1413,208L1440,224L1440,320L1413.3,320C1386.7,320,1333,320,1280,320C1226.7,320,1173,320,1120,320C1066.7,320,1013,320,960,320C906.7,320,853,320,800,320C746.7,320,693,320,640,320C586.7,320,533,320,480,320C426.7,320,373,320,320,320C266.7,320,213,320,160,320C106.7,320,53,320,27,320L0,320Z"></path>            
+                </svg>
+            </div>
+            <!--</section>-->
+            
+            <!-- About Us (kinda) -->
+            <!--<section id="about">-->
+            <div id="about">
+                <!-- Title -->
+                <h1>Welcome!</h1>
+
+                <!-- My projects -->
+                <div class="container">
+                    <div class="wgh-slider">
+                      <input class="wgh-slider-target" type="radio" id="slide-1" name="slider" checked="checked"/>
+                      <input class="wgh-slider-target" type="radio" id="slide-2" name="slider"/>
+                      <input class="wgh-slider-target" type="radio" id="slide-3" name="slider"/>
+                      <input class="wgh-slider-target" type="radio" id="slide-4" name="slider"/>
+                      <input class="wgh-slider-target" type="radio" id="slide-5" name="slider"/>
+                      <div class="wgh-slider__viewport">
+                        <div class="wgh-slider__viewbox">
+                          <div class="wgh-slider__container">
+                            <div class="wgh-slider-item">
+                              <div class="wgh-slider-item__inner">
+                                <figure class="wgh-slider-item-figure"><img class="wgh-slider-item-figure__image" src="Images/slide1.jpg" alt="Slide 1"/>
+                                  <figcaption class="wgh-slider-item-figure__caption"><a href="https://f4.bcbits.com/img/a3905613628_16.jpg"></a></figcaption>
+                                </figure>
+                                <label class="wgh-slider-item__trigger" for="slide-1" title="Show product 1"></label>
+                              </div>
+                            </div>
+                            <div class="wgh-slider-item">
+                              <div class="wgh-slider-item__inner">
+                                <figure class="wgh-slider-item-figure"><img class="wgh-slider-item-figure__image" src="Images/slide2.png" alt="Slide 2"/>
+                                  <figcaption class="wgh-slider-item-figure__caption"><a href="https://f4.bcbits.com/img/a3905613628_16.jpg"></a></figcaption>
+                                </figure>
+                                <label class="wgh-slider-item__trigger" for="slide-2" title="Show product 2"></label>
+                              </div>
+                            </div>
+                            <div class="wgh-slider-item">
+                              <div class="wgh-slider-item__inner">
+                                <figure class="wgh-slider-item-figure"><img class="wgh-slider-item-figure__image" src="Images/slide3.jpg" alt="Slide 3"/>
+                                  <figcaption class="wgh-slider-item-figure__caption"><a href="https://f4.bcbits.com/img/a3905613628_16.jpg"></a></figcaption>
+                                </figure>
+                                <label class="wgh-slider-item__trigger" for="slide-3" title="Show product 3"></label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                <!-- Welcome to Little Bird -->
+                <p class="aboutpar"> 
+                    This is the Little Bird Foundation! Every month, we provide money through a randomly selected raffle
+                    to people in need.
+                </p>
+                
+                <p class="aboutpar"> 
+                  This page contains details about how to enter the raffle, eligibility, our objectives, and the person behind this 
+                  foundation.
+                </p>
+                
+                <br><br><br><br><br><br><br><br>
+            </div>
+
+            <!-- Goal section -->
+            <div>
+              <br><br><br><br><br><br>
+
+                <!-- Title -->
+                <h1>HOW & WHERE YOU CAN ENTER</h1> 
+
+                <br>
+
+                <img class="igpageimg" src="Images/igpagewithlogo.png">
+
+                <!-- Little Bird's Goal -->
+                <p class="aboutpar"> 
+                    Head to our Instagram page and follow the instructions in our bio to enter the raffle! 
+                    Click the button below to visit the page.
+                </p>
+                
+                <p class="aboutpar"> 
+                    Best of luck to everyone entering!
+                </p>
+
+                <br><br>
+
+                <!-- Roadmap Button (repeat) -->        
+                <button onclick=" window.open('https://www.instagram.com/littlebirdfdn','_blank')" class="hometomapbtndark">Visit our IG Page!</button> 
+                
+                <br><br><br><br><br><br><br><br>
+            
+            </div>
+
+            <div>
+                <!-- Title -->
+                <h1>ELIGIBILITY</h1> 
+
+                <p class="aboutpar">Generally, the Little Bird Foundation considers applications from anyone who is in need.</p>
+                
+                <p class="aboutpar">However, <span style="font-weight: 600;">each month,</span> our target group will change. For example, this month's 
+                  target group is <span style="font-weight: 600;">widows</span>.</p>
+
+                <br><br><br><br><br><br><br><br>
+            </div>
+
+            <!-- Who we are section -->
+            <div>
+              <br><br><br><br><br><br>
+
+                <!-- Title -->
+                <h1>OUR OBJECTIVES</h1> 
+
+                <div class="intcontainer" style="min-height: 400px;">
+                  <!-- Box 1 -->
+                  <div class="intbox" style="min-height: 400px;"> 
+                      <!-- <img src="Images/vitalinfo.png" class="boximg" style="width: auto;" alt="Vital Autism Information Icon"><br> -->
+                      <p class="boxtitle">1</p><br>
+                      <p class="boxpar"> 
+                        To provide care, shelter and sustenance for underprivileged persons through the establishment and management of assisted living centres and the provision of sustainable assistance programmes.
+                      </p><br> 
+                  </div>
+
+                  <!-- Box 2 -->
+                  <div class="intbox" style="min-height: 400px;">
+                      <!-- <img src="Images/immediateservices.jpg" class="boximg" alt="Immediate Autism Services Icon"><br> -->
+                      <p class="boxtitle">2</p><br>
+                      <p class="boxpar"> 
+                        To promote, motivate, provide and meet needs of the under privileged especially children and the elderly, their civil rights and educational development. 
+                      </p><br> 
+                  </div>
+
+                  <!-- Box 3 -->
+                  <div class="intbox" style="min-height: 400px;">
+                      <!-- <img src="Images/vibrantcomm.png" class="boximg" alt="A Vibrant Autism Community Icon"><br> -->
+                      <p class="boxtitle">3</p><br>
+                      <p class="boxpar"> 
+                        To empower and motivate the less privilege in the society towards a reliance and sustainable lifestyle through well organise grassroots programs such as free education and skills acquisition training.
+                      </p><br>
+                  </div> 
+                  
+                  <!-- Box 4 -->
+                  <div class="intbox" style="min-height: 400px;"> 
+                      <!-- <img src="Images/innovation.png" class="boximg" alt="Positivity Cloud Icon"><br> -->
+                      <p class="boxtitle">4</p><br>
+                      <p class="boxpar"> 
+                        To improve the capacity of health facilities and to promote and provide medical support services to the less privileged through the initiation of free healthcare and medical enlightening programs. 
+                      </p><br> 
+                  </div>
+
+                  <!-- Box 5 -->
+                  <div class="intbox" style="min-height: 400px;"> 
+                    <!-- <img src="Images/positivitycloud.png" class="boximg" alt="Positivity Cloud Icon"><br> -->
+                    <p class="boxtitle">5</p><br>
+                    <p class="boxpar"> 
+                      To work with registered and authorized laboratory centres and hospital, including psychiatric hospitals for proper medical attention for same classes of persons. 
+                    </p><br> 
+                  </div>
+
+                  <!-- Box 6 -->
+                  <div class="intbox" style="min-height: 400px;"> 
+                    <!-- <img src="Images/positivitycloud.png" class="boximg" alt="Positivity Cloud Icon"><br> -->
+                    <p class="boxtitle">6</p><br>
+                    <p class="boxpar"> 
+                      To promote and support humanitarian programmes within the society in Nigeria through advocacy and citizen bureau.
+                    </p><br> 
+                  </div>
+
+                  <!-- Box 7 -->
+                  <div class="intbox" style="min-height: 400px;"> 
+                    <!-- <img src="Images/positivitycloud.png" class="boximg" alt="Positivity Cloud Icon"><br> -->
+                    <p class="boxtitle">7</p><br>
+                    <p class="boxpar"> 
+                      To promote and improve the availability of all basic amenities such as food, water, health, education, good housing and motorable roads and all sure other amenities are made available to the under privileged and grassroots of the communities.
+                    </p><br> 
+                  </div>
+                </div><br><br>
+
+
+                <br><br><br><br><br><br><br><br>
+
+            </div>
+
+            <!-- Who we are section -->
+            <div>
+              <br><br><br><br><br><br>
+
+                <!-- Title -->
+                <h1>THE PERSON BEHIND IT ALL</h1> 
+
+                <!-- Home Piece #1 -->
+                <img src="Images/Engr Azuka.jpg" class="aboutimg" alt="Main Person">
+
+                <!-- Little Bird's Goal -->
+                <p class="aboutpar"> 
+                    This is the person behind it all: Engr. Azuka Obasuyi! She knows firsthand about the difficulties that immigrant students
+                    face when they enter a new country, and decided to do something not only for other immigrant students, but for anyone
+                    in need.
+                </p>
+
+                <p class="aboutpar"> 
+                  Her nickname growing up was 'little bird', and she felt that like the birds who supported her when she was a little bird
+                  learning to stretch her wings, she wanted to do the same for other little birds learning how to fly now.
+                </p>
+
+                <p class="aboutpar"> 
+                  Now, the Little Bird Foundation is spreading its wings, hoping to reach other little birds in need of support, assistance,
+                  and guidance in our own way, and following her vision.
+                </p>
+
+                <br><br>
+
+                <!-- Roadmap Button (repeat) -->        
+                <!-- <button onclick=" window.open('about.html','_self')" class="hometomapbtndark"><!--<i class="fa fa-book"></i>--><!--Find out more about us!</button>  -->
+
+                <br><br><br><br><br><br><br><br>
+
+            </div>
+            
+            <div id="graydivlightcolor"></div>
+            <div id="graydivdarkcolor"></div>
+            
+            <!-- Copyright -->
+            <div id="contact" class="copydiv"><br><br>
+                <!-- Contact Buttons -->
+                <!--href="website link here" target="_self"-->
+                <a class="tooltip" href="https://www.instagram.com/littlebirdfdn"><img src="Images/insta.png" class="copybtn" alt="Little Bird's Instagram"><span class="tooltiptext">IG Page</span></a>
+                <a class="tooltip" ><img src="Images/facebook.png" class="copybtn" alt="Little Bird's Facebook"><span class="tooltiptext">Facebook Coming Soon!</span></a>
+                <a class="tooltip"><img src="Images/twitter.png" class="copybtn" alt="Little Bird's Twitter"><span class="tooltiptext">Twitter Coming Soon!</span></a>
+                <a class="tooltip"><img src="Images/linkedin2.png" class="copybtn" alt="Little Bird's Linkedin"><span class="tooltiptext">Linkedin Coming Soon!</span></a>
+                <!-- <a class="tooltip" href="mailto:info@littlebird.ca"><img src="Images/email.png" class="copybtn" alt="Little Bird's Email"><span class="tooltiptext">info@littlebird.ca</span></a> -->
+                <!-- <a class="tooltip"><img src="Images/phone.png" class="copybtn" alt="Little Bird's Phone Number"><span class="tooltiptext">Phone Number coming soon!</span></a> -->
+
+                <!-- <br><br>
+                <button class="hometomapbtndark" onclick="window.open('https://7gh5ta51vgo.typeform.com/to/n3eDFEmc', '_self')">
+                  Sign Up for our Newsletter
+                </button> -->
+
+                <!-- Copyright Statement -->
+                <br>
+                <p class="copytext">&copy; 2022 <span style="font-weight: 700;">Little Bird CO.</span>. All Rights Reserved. </p>
+                <br>
+                    
+            </div>
+            
+        </div>
+
+        <!-- Javascript -->
+        <!-- type="text/javascript" isn't needed since the <script> type is defaulted to js -->
+            <script src="script.js"></script>     
+            <!-- <script src="https://embed.typeform.com/embed.js"></script> -->
+
+    </body>
+</html>

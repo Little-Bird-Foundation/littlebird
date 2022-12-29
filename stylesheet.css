@@ -1,0 +1,1420 @@
+/* START - Stylesheet */
+
+/******************** TABLE OF CONTENTS ********************/
+/* General & Slideshow */
+/* Top Button */
+/* 1. Home */
+/* 2. About */
+/* 3. Projects */
+/* 4. Experience */
+/* 5. Portfolito */
+/* 6. Interests */
+/* 7. Blog */
+/* 8. Contact */
+/* 9. Copyright */
+/* 10. Blog Page */
+/* 11. Map System Page */
+    
+        /***** GENERAL *****/
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            height: 100%;
+            margin: 0;
+            font-family: Poppins, Poppins, Poppins;
+            font-weight: lighter;
+        }
+        
+        p {
+            margin: 0;
+            padding: 0;
+            line-height: 0;
+        }
+        
+        h1 {
+            font-size: 45px; 
+            font-weight: 500; 
+            text-align: center;
+            margin-top: 10px; 
+            margin-bottom: 50px;
+        }
+        
+        h2 {
+            font-size: 20px; 
+            font-weight: 300; 
+            text-align: center; 
+            margin-top: 60px;
+        }
+
+        .curved-div {
+            background: white;
+            color: #FFF;
+            text-align: center;
+        }
+
+        .curved-div .upper {
+            background: white;
+            color: #FFF;
+            text-align: center;
+        }
+        
+        .graydiv {
+            /* background-color: #99c1ff; */
+            background-image: linear-gradient(to right,#2998ff , #99c1ff);
+        }
+
+        .graydivdark {
+            background-color: #000b1f;
+            background-image: linear-gradient(to right, #001438, #000b1f);
+        }
+        
+        .copydiv {
+            /* background-color: #6b97db;  */
+            background-image: linear-gradient(to right,#2950ff , #fca103);
+            color: white; 
+            text-align: center; 
+            
+        }
+        
+        /* Light/Dark Mode */
+        body.dark-mode {
+            /* background-color: #020f26; */
+            background-image: linear-gradient(to right, #041a41, #031535);
+            color: #f0f0f0;
+        }
+        
+        p.dark-mode {
+            color: #f0f0f0;
+        }
+        
+        /*body.dark-mode button {
+            background-color: white;
+            color: black;
+        }*/
+
+        /*graydivdark color: #000b1f;*/
+
+        body.light-mode {
+            background-color: white;
+            color: #323232;
+        }
+        
+        p.light-mode {
+            color: #323232;
+        }
+        
+        /*body.light-mode button {
+            background-color: black;
+            color: white;
+        }*/
+
+        /* Animating the page */
+        .animate-bottom {
+            position: relative;
+            -webkit-animation-name: animatebottom;
+            -webkit-animation-duration: 1s;
+            animation-name: animatebottom;
+            animation-duration: 1s
+        }
+
+        @-webkit-keyframes animatebottom {
+            from { bottom:-100px; opacity:0 } 
+            to { bottom:0px; opacity:1 }
+        }
+
+        @keyframes animatebottom { 
+            from{ bottom:-100px; opacity:0 } 
+            to{ bottom:0; opacity:1 }
+        }
+        
+        /* The page */
+        #myDiv {
+            display: block;
+            text-align: center;
+        }
+    /***** GENERAL END *****/            
+
+    /***** SLIDESHOW *****/
+        .show {display:block;}
+        
+        .mySlides {display: none;}
+        img {vertical-align: middle;}
+
+        /* Slideshow container */
+        .slideshow-container {
+          max-width: 80%;
+          max-height: 60%;
+          position: relative;
+          text-align: center;
+          margin: auto;
+          z-index: 0; 
+        }
+
+        .slidevideo {
+            margin-left: 0;
+            margin-right: 0;
+            float: center;
+        }
+
+        /* Next & previous buttons */
+        .prev, .next {
+          cursor: pointer;
+          position: absolute;
+          top: 60%;
+          width: auto;
+          padding: 16px;
+          color: #dddddd;
+          font-family: Poppins;
+          font-weight: bold;
+          font-size: 18px;
+          transition: 0.6s ease;
+          border-radius: 0 3px 3px 0;
+          user-select: none;
+        }
+        
+        .prev {
+          left: 0;
+          border-radius: 3px 0 0 3px;
+        }
+        
+        .next {
+          right: 0;
+          border-radius: 3px 0 0 3px;
+        }
+
+        /* On hover, add a black background color with a little bit see-through */
+        .prev:hover, .next:hover {
+          background-color: rgba(0,0,0,0.8);
+        }
+
+        /* Caption text */
+        .slidetext {
+          color: #f2f2f2;
+          font-size: 15px;
+          padding: 8px 12px;
+          position: absolute;
+          bottom: 0px;
+          width: 100%;
+          text-align: center;
+          font-family: Poppins;
+          font-weight: 700;
+          font-size: 30px;
+        }
+
+        /* Number text (1/3 etc) */
+        .numbertext {
+          color: #f2f2f2;
+          font-size: 12px;
+          padding: 8px 12px;
+          position: absolute;
+          top: 0;
+        }
+
+        /* The dots/bullets/indicators */
+        .slidedot {
+          cursor: pointer;
+          height: 15px;
+          width: 15px;
+          margin: 0 2px;
+          background-color: #bbb;
+          border-radius: 50%;
+          display: inline-block;
+          transition: background-color 0.6s ease;
+        }
+
+        /* .active, .slidedot:hover {
+          background-color: #717171;
+        } */
+
+        .mySlides .slidetooltiptext {
+            visibility: hidden;
+            min-width: 120px;
+            max-width: 50%;
+            background-color: #555;
+            color: #ddd;
+            font-size: 15px;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px 5px;
+            position: absolute;
+            z-index: 3;
+            bottom: 102%;
+            left: 50%;
+            margin-left: -60px;
+            opacity: 0;
+            transition: opacity 0.3s;
+            font-family: Poppins; 
+            font-weight: 300;
+        }
+
+        .mySlides .slidetooltiptext::after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: #555 transparent transparent transparent;
+        }
+
+        .mySlides:hover .slidetooltiptext {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        /* Fading animation */
+        .fade {
+          -webkit-animation-name: fade;
+          -webkit-animation-duration: 1.5s;
+          animation-name: fade;
+          animation-duration: 1.5s;
+        }
+
+        @-webkit-keyframes fade {
+          from {opacity: .4} 
+          to {opacity: 1}
+        }
+
+        @keyframes fade {
+          from {opacity: .4} 
+          to {opacity: 1}
+        }
+
+        /* On smaller screens, decrease text size */
+        @media only screen and (max-width: 300px) {
+          .prev, .next,.text {font-size: 11px}
+        }
+        
+
+
+    /***** SECTION 0: TOPNAV BAR *****/
+        .topnav {
+            top: 0px;
+            width: 100%;
+            position: fixed;
+            background-color: transparent;
+            overflow: hidden;
+            z-index: 2;
+          
+        }
+
+        .topnav a {
+            float: left;
+            display: block;
+            color: black;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: lighter;
+        }
+        
+        .dropdown {
+            float: right;
+            width: 10%; 
+            margin-right: 40px;
+        }
+
+        .dropdown:hover, .dropbtn:hover {
+            /*border-bottom: 3px solid black;
+            color: black;
+            font-weight: 500;
+            text-decoration: underline;*/
+        }
+        
+        .dropbtn {
+            background-color: transparent;
+            color: black;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: 300;
+        }
+        
+        .dropdown .dropbtn {
+            font-size: 16px;  
+            border: none;
+            outline: none;
+            padding: 14px 16px;
+            background-color: inherit;
+            color: #757474;
+            opacity: 1;
+            font-size: 20px;
+            font-weight: lighter;
+            margin: 0;
+            font-size: 13px; 
+            margin-left: 1%;
+            cursor: pointer;
+        }
+
+        .dropdown .dropbtncurrent {
+            font-size: 16px;  
+            border: none;
+            outline: none;
+            padding: 14px 16px;
+            background-color: inherit;
+            color: #d4d4d4;
+            opacity: 1;
+            font-size: 20px;
+            font-weight: normal;
+            margin: 0;
+            font-size: 13px; 
+            margin-left: 1%;
+        }
+        
+        .dropdown-content {
+            display: none;
+            position: fixed;
+            left: 0;
+            /*background-color: black;*/
+            background-color: rgba(135, 208, 255, 0.3);
+            background-color: white;
+            opacity: 0.8;
+            width: 100%;
+            text-align: center;
+            z-index: 1;
+        }
+        
+        .dropdown-content a {
+            float: none;
+            /*background-color: black;*/
+            background-color: #76b2db;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: center;
+        }
+        
+        .dropdown-content a:hover {
+            color: #d4d4d4;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        /* The Black Background behind the modal */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 2;
+            padding-top: 100px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgb(0,0,0); /* Fallback color */
+            background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+        }
+
+        /* Modal Content */
+        .modal-content {
+            position: relative;
+            background-color: #fefefe;
+            margin: auto;
+            padding: 0;
+            /*border: 1px solid #888;*/
+            width: 60%;
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+            -webkit-animation-name: animatetop;
+            -webkit-animation-duration: 0.4s;
+            animation-name: animatetop;
+            animation-duration: 0.4s
+        }
+
+        /* Add Animation */
+        @-webkit-keyframes animatetop {
+            from {top:-300px; opacity:0} 
+            to {top:0; opacity:1}
+        }
+
+        @keyframes animatetop {
+            from {top:-300px; opacity:0}
+            to {top:0; opacity:1}
+        }
+
+        /* The Close Button */
+        .close {
+            color: white;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .modal-header {padding: 2px 8px; background-image: linear-gradient(to right,#2998ff , #99c1ff); color: white;}
+
+        .modal-body {padding: 2px 8px; display: flex; flex-flow: row wrap; justify-content: space-around; align-items: center;}
+
+        /*.modal-footer {
+            padding: 2px 16px;
+            background-color: #5cb85c;
+            color: white;
+        }*/
+
+        /* Dark/Light Toggle */
+        /* #dltoggle {
+            margin-left: 1%;
+            display: block;
+            cursor: pointer; 
+        }
+
+        #dltoggle {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            left: 30px;
+            z-index: 3;
+            font-size: 18px;
+            border: none;
+            outline: none;
+            color: white;
+            cursor: pointer;
+            padding: 5px;
+            border-radius: 4px;
+            background-color: transparent;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        }
+
+        .dlimg {
+            width: 50px;
+            
+        } */
+        
+
+        /* Contribute Button (Same as Dark/Light Toggle) */
+        #contributebtn {
+            margin-left: 1%;
+            display: block;
+            cursor: pointer; 
+        }
+
+        #contributebtn {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            left: 30px;
+            z-index: 3;
+            font-size: 18px;
+            border: none;
+            background: transparent;
+            font-family: Poppins;
+            padding: 0;
+            cursor: pointer;
+            outline-offset: 4px;
+            transition: filter 250ms;
+          }
+          .shadow {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 12px;
+            background: hsl(0deg 0% 0% / 0.25);
+            will-change: transform;
+            transform: translateY(2px);
+            transition:
+              transform
+              600ms
+              cubic-bezier(.3, .7, .4, 1);
+          }
+          .edge {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 12px;
+            background-image: linear-gradient(to right,#2950ff , #fca103);
+            /* background: linear-gradient(
+              to left,
+              hsl(340deg 100% 16%) 0%,
+              hsl(340deg 100% 32%) 8%,
+              hsl(340deg 100% 32%) 92%,
+              hsl(340deg 100% 16%) 100%
+            ); */
+          }
+          .front {
+            display: block;
+            position: relative;
+            padding: 12px 42px;
+            border-radius: 12px;
+            font-size: 1.25rem;
+            color: white;
+            /* background: hsl(345deg 100% 47%); */
+            background-image: linear-gradient(to right,#2950ff , #fca103);
+            will-change: transform;
+            transform: translateY(-4px);
+            transition:
+              transform
+              600ms
+              cubic-bezier(.3, .7, .4, 1);
+          }
+          .contributebtn:hover {
+            filter: brightness(110%);
+          }
+          .contributebtn:hover .front {
+            transform: translateY(-6px);
+            transition:
+              transform
+              250ms
+              cubic-bezier(.3, .7, .4, 1.5);
+          }
+          .contributebtn:active .front {
+            transform: translateY(-2px);
+            transition: transform 34ms;
+          }
+          .contributebtn:hover .shadow {
+            transform: translateY(4px);
+            transition:
+              transform
+              250ms
+              cubic-bezier(.3, .7, .4, 1.5);
+          }
+          .contributebtn:active .shadow {
+            transform: translateY(1px);
+            transition: transform 34ms;
+          }
+          .contributebtn:focus:not(:focus-visible) {
+            outline: none;
+          }
+
+          .contributeimg {
+            width: 50px;
+            
+        }
+
+        /* Logo */
+        #logoimg {
+            width: 40px; 
+            /* height: 36px;  */
+            float: left; 
+            margin-left: 20%; 
+            padding: 10px 10px;
+        }
+
+        /* Dropdown Image */
+        #dropimg {
+            width: 24px; 
+            height: 20px; 
+            margin-right: 40%; 
+            margin-top: 10px; 
+            padding: 10px 10px;
+        }
+    /***** SECTION 0: TOP NAVBAR END *****/
+        
+        
+
+    /***** TOP BUTTON *****/
+        #topbtn {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 30px;
+            z-index: 3;
+            font-size: 18px;
+            border: none;
+            outline: none;
+            color: white;
+            cursor: pointer;
+            padding: 5px;
+            border-radius: 4px;
+            background-color: transparent;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        }
+        
+        .topimg {
+            width: 50px;
+        }
+    /***** TOP BUTTON END *****/
+        
+        
+        
+    /***** SECTION 1: HOME *****/
+        .igpageimg {
+            margin: auto;
+            display: block;
+            width: 50%;
+        }
+
+        .hometitle {
+            font-size: 80px; 
+            color: white; 
+            font-weight: 700; 
+            text-align: center; 
+            margin-bottom: 20px; 
+            line-height: 1.1;
+        }
+
+        .homesemititle {
+            letter-spacing: 2px;
+            font-size: 40px; 
+            color: white; 
+            font-weight: 400; 
+            text-align: center; 
+            margin-bottom: 10px; 
+            line-height: 1.1;
+        }
+
+        .hometitledescrip {
+            letter-spacing: 2px;
+            font-size: 30px; 
+            color: white; 
+            font-weight: 400; 
+            text-align: center; 
+            margin-bottom: 10px; 
+            line-height: 1.1;
+        }
+        
+        #text {
+            font-size: 35px; 
+            font-weight: 600; 
+            color: white;
+            text-align: center;
+            line-height: 1.2;
+        }
+
+        .hometomapbtn {
+            letter-spacing: 1px;
+            background-color: white; 
+            color: #99c1ff; 
+            padding: 10px 20px;
+            font-family: Poppins; 
+            font-size: 17px; 
+            font-weight: 400;
+            
+            border: 2px solid #99c1ff;
+            border-radius: 5px;
+            /*box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);*/
+            cursor: pointer; 
+            
+            /* Center button */
+            margin: auto;
+            display: block;
+        }
+
+        .hometomapbtn:hover {
+            letter-spacing: 1px;
+            background-color: #99c1ff; /*00 at the end makes it transparent*/
+            color: white; 
+            padding: 10px 20px;
+            font-family: Poppins; 
+            font-size: 17px;
+            font-weight: 400;
+            
+            border: 2px solid #99c1ff;
+            border-radius: 5px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.4);
+            cursor: pointer; 
+            
+            /* Center button */
+            margin: auto;
+            display: block;
+        }
+
+        .hometomapbtndark {
+            letter-spacing: 1px;
+            background-color: white; 
+            color: #000b1f; 
+            padding: 10px 20px;
+            font-family: Poppins; 
+            font-size: 17px; 
+            font-weight: 400;
+            
+            border: 2px solid #000b1f;
+            border-radius: 5px;
+            /*box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);*/
+            cursor: pointer; 
+            
+            /* Center button */
+            margin: auto;
+            display: block;
+        }
+
+        .hometomapbtndark:hover {
+            letter-spacing: 1px;
+            background-color: #000b1f; /*00 at the end makes it transparent*/
+            color: white; 
+            padding: 10px 20px;
+            font-family: Poppins; 
+            font-size: 17px;
+            font-weight: 400;
+            
+            border: 2px solid #000b1f;
+            border-radius: 5px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.6);
+            cursor: pointer; 
+            
+            /* Center button */
+            margin: auto;
+            display: block;
+        }
+        
+        .downbtn {
+            float: center; 
+            width: 75px; 
+            height: 75px; 
+            margin-top: 100px; 
+            margin-bottom: 100px;
+        }
+    /***** SECTION 1: HOME END *****/
+        
+        
+        
+    /***** SECTION 2: ABOUT *****/
+        .aboutimg {
+            width: 50%; 
+            /*box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);*/
+            /*float: left;
+            margin-left: 10%;
+            display: inline;*/
+            
+            /*Center Image*/
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .aboutpar {
+            font-size: 22px; 
+            font-weight: 300; 
+            align-content: right;
+            text-align: justify; 
+            text-align-last: center; 
+            line-height: 40px;
+            margin-left: 50px; 
+            margin-right: 50px;
+            margin-top: 50px; 
+        }
+        
+        .aboutpar2 {
+            font-size: 22px; 
+            font-weight: 700; 
+            text-align: justify; 
+            text-align-last: center; 
+            line-height: 40px; 
+            margin-left: 50px; 
+            margin-right: 50px; 
+            margin-top: 50px; 
+        }
+
+        .collapsible {
+            background-color: #777;
+            color: white;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: center;
+            outline: none;
+            font-size: 22px;
+            font-family: Poppins;
+          }
+          
+          /* .active, .collapsible:hover {
+            background-color: #555;
+          } */
+
+          .collapsible:after {
+            content: '\002B';
+            color: white;
+            font-weight: bold;
+            float: right;
+            margin-left: 5px;
+          }
+          
+          .content {
+            /* padding: 0px 18px; */
+            max-height: 0px;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+          }
+
+          .collapsible2 {
+            background-color: #ebebeb;
+            color: black;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: center;
+            outline: none;
+            font-size: 22px;
+            font-family: Poppins;
+          }
+          
+          /* .active, .collapsible2:hover {
+            background-color: #e4e4e4;
+          } */
+
+          .collapsible2:after {
+            content: '\002B';
+            color: white;
+            font-weight: bold;
+            float: right;
+            margin-left: 5px;
+          }
+          
+        .collapsible2:hover {
+            background-color: #e4e4e4;
+        }
+    /***** SECTION 2: ABOUT END*****/
+        
+        
+        
+    /***** SECTION 3: PROJECTS *****/
+        .projcontainer { 
+            display: flex;
+            flex-flow: row wrap; /* Flex direction: Determines direction flex items are placed in the flex container; Flex wrap: Allows items to fit on multiple lines. */
+            justify-content: space-around;
+            align-items: center;
+            min-height: 650px;
+        } 
+        
+        .projbox {
+            width: 375px; 
+            height: 450px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            margin-bottom: 20px;
+        }
+
+        .projbox:hover {
+            width: 375px; 
+            height: 450px;
+            box-shadow: 0px 16px 30px 10px rgba(0,0,0,0.2);
+            margin-bottom: 20px;
+        }
+        
+        .boximg {
+            width: 60px; 
+            height: 60px; 
+            margin-top: 20px;
+        }
+        
+        .boxtitle {
+            margin-top: 20px; 
+            margin-bottom: 30px; 
+            font-weight: 600; 
+        }
+        
+        .boxpar {
+            line-height: 1.8; 
+            margin-left: 20px; 
+            margin-right: 20px; 
+            margin-bottom: 15px; 
+            font-weight: 300;
+            white-space: normal;
+        }
+        /* Container 2 End*/
+        
+    /***** SECTION 3: PROJECTS END *****/
+        
+        
+        
+    /***** SECTION 4: EXPERIENCE *****/
+        
+        /* Container 2 - Overlay Container */
+        .expcontainer {
+            position: relative;
+            margin: auto;
+            width: 85%;
+        }
+
+        .image {
+            display: block;
+            width: 100%;
+            height: auto;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        }
+
+        .overlay {
+            position: absolute;
+            top: 2.5%;
+            bottom: 0;
+            left: 2.5%;
+            right: 0;
+            height: 95%;
+            width: 95%;
+            opacity: 0;
+            transition: .5s ease;
+            background-color: ghostwhite;
+        }
+
+        .expcontainer:hover .overlay {
+            opacity: 0.9;
+         }
+        /* Container 1 - Overlay Container End */
+        
+        .text2 {
+            color: #272727;
+            font-size: 3.5vw;
+            font-weight: 700;
+            position: absolute;
+            top: 15%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+        
+        .text3 {
+            color: #4d4d4d;
+            font-size: 1.2vw;
+            font-weight: 300;
+            line-height: 1.7;
+            position: absolute;
+            top: 60%;
+            left: 20%;
+            -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-10%, -50%);
+            text-align: center;
+        }
+
+        .text5 {
+            color: #4d4d4d;
+            font-size: 15px;;
+            font-weight: 600;
+            line-height: 1.7;
+            position: absolute;
+            top: 75%;
+            left: 20%;
+            -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-10%, -50%);
+            text-align: center;
+        }
+        
+        .text4 {
+            color: #696969;
+            line-height: 1.8;
+            font-size: 20px;
+            font-weight: 600;
+            position: absolute;
+            top: 90%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            text-align: center;
+            text-decoration: underline;
+        }
+    /***** SECTION 4: EXPERIENCE END *****/
+        
+        
+        
+    /***** SECTION 5: PORTFOLIO *****/
+        .downloadbtn {
+            background-color: #252525; 
+            color: white; 
+            padding: 20px 20px;
+            font-family: Poppins; 
+            font-size: 25px; 
+            font-weight: 200;
+            border: none;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            cursor: pointer; 
+            
+            /* Center button */
+            margin: auto;
+            display: block;
+        }
+
+        .downloadbtn:hover {
+            background-color: black; 
+            color: white; 
+            padding: 20px 20px;
+            font-family: Poppins; 
+            font-size: 25px;
+            font-weight: 200;
+            border: none;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            cursor: pointer; 
+            
+            /* Center button */
+            margin: auto;
+            display: block;
+        }
+    /***** SECTION 5: PORTFOLIO END *****/
+        
+        
+        
+    /***** SECTION 6: INTERESTS *****/
+        .intcontainer { 
+            display: flex;
+            flex-flow: row wrap; /* Flex direction: Determines direction flex items are placed in the flex container; Flex wrap: Allows items to fit on multiple lines. */
+            justify-content: space-around;
+            align-items: center;
+            min-height: 750px;
+        } 
+        
+        .intbox {
+            width: 375px; 
+            min-height: 750px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            margin-bottom: 20px;
+        }
+
+        .intbox:hover {
+            width: 375px; 
+            min-height: 750px;
+            box-shadow: 0px 16px 30px 10px rgba(0,0,0,0.2);
+            margin-bottom: 20px;
+        }
+    /***** SECTION 6: INTERESTS END *****/
+        
+        
+        
+    /***** SECTION 7: BLOG *****/
+        .row{display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;margin-right:-15px;margin-left:-15px}
+
+        .blogimg {
+            float: left; 
+            margin-left: 15%; 
+            width: 30%;
+            transition: transform .2s; /*Animation*/
+        }
+
+        .blogimg:hover {
+            float: left; 
+            margin-left: 15%; 
+            width: 30%;
+            transform: scale(1.5);
+        }
+        
+        .blogimg2 {
+            float: right; 
+            margin-right: 15%; 
+            width: 30%;
+            transition: transform .2s; /*Animation*/
+        }
+
+        .blogimg2:hover {
+            float: right; 
+            margin-right: 15%; 
+            width: 30%;
+            transform: scale(1.5);
+        }
+
+        .blogbtn {
+            background-color: #252525; 
+            color: white; 
+            padding: 20px 20px;
+            font-family: Poppins; 
+            font-size: 25px; 
+            font-weight: 200;
+            border: none;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            cursor: pointer; 
+            
+            /* Center button */
+            margin: auto;
+            display: block;
+        }
+
+        .blogbtn:hover {
+            background-color: black; 
+            color: white; 
+            padding: 20px 20px;
+            font-family: Poppins; 
+            font-size: 25px;
+            font-weight: 200;
+            border: none;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            cursor: pointer; 
+            
+            /* Center button */
+            margin: auto;
+            display: block;
+        }
+    /***** SECTION 7: BLOG END *****/
+        
+        
+        
+    /***** SECTION 8: CONTACT *****/
+        .contact {
+            border-radius: 5px;
+            background-color: #f2f2f2;
+            padding: 20px;
+            position: relative;
+            left: 22%;
+            width: 50%;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        }
+        
+        input[type=text], select, textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-top: 6px;
+            margin-bottom: 16px;
+            font-family: Poppins;
+            font-size: 15px;
+            resize: vertical;
+        }
+
+        input[type=submit] {
+            background-color: #252525;
+            color: white;
+            font-size: 15px;
+            font-weight: 500;
+            font-family: Poppins;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        }
+
+        input[type=submit]:hover {
+            background-color: black;
+            color: white;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        }
+    /***** SECTION 8: CONTACT END *****/
+        
+        
+        
+    /***** SECTION 9: COPYRIGHT *****/
+        
+        /* Copyright button */
+        .copybtn {
+            width: 40px; 
+            height: 40px;
+            border-radius: 50%; 
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            
+            /* Center button */
+            margin: auto;
+            display: block;
+
+            margin-bottom: 10px;
+        }
+        
+        .copytext {
+            font-family: Poppins;
+            margin-top: 10px;
+            line-height: 1.5;
+            text-align: center;
+            margin-bottom: 25px;
+        }
+        
+        /* Tooltp (button hover text) */
+        .tooltip {
+            position: relative;
+            display: inline-block;
+        }
+
+        .tooltip .tooltiptext {
+            visibility: hidden;
+            min-width: 120px;
+            background-color: #555;
+            color: #fff;
+            font-size: 15px;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px 0;
+            position: absolute;
+            z-index: 1;
+            bottom: 125%;
+            left: 50%;
+            margin-left: -60px;
+            opacity: 0;
+            transition: opacity 0.3s;
+            font-family: Poppins; 
+            font-weight: 300;
+        }
+
+        .tooltip .tooltiptext::after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: #555 transparent transparent transparent;
+        }
+
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
+            opacity: 1;
+        }
+    /***** SECTION 9: COPYRIGHT END *****/
+
+
+    /***** SECTION 10: BLOG PAGE *****/
+
+        /* Back button */
+        .backbtn {
+            background-color: transparent;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: underline;
+            font-size: 15px;
+            font-weight: 300;
+            cursor: pointer; 
+            margin-top: 20px; 
+        }
+
+        .blogcontainer {
+            display: flex;
+            flex-flow: row wrap; /* Flex direction: Determines direction flex items are placed in the flex container; Flex wrap: Allows items to fit on multiple lines. */
+            justify-content: space-around;
+            align-items: center;
+            min-height: 650px;
+            white-space: normal;
+        }
+
+        .blogbox {
+            width: 400px; 
+            height: 500px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            margin-bottom: 20px;
+        }
+
+        .blogbox:hover {
+            width: 400px; 
+            height: 500px;
+            box-shadow: 0px 16px 30px 10px rgba(0,0,0,0.2);
+            margin-bottom: 20px;
+        }
+
+        .newsimg {
+            width: 400px; 
+            height: 220px;
+            margin-bottom: 15;
+        }
+
+        .blogtitle {
+            margin-top: 20px; 
+            margin-bottom: 30px; 
+            font-weight: 600;
+            font-size: 20px;
+            white-space: normal;
+            line-height: 1.2;
+        }
+
+        .blogbtn2 {
+            background-color: #252525; 
+            color: white; 
+            padding: 15px 20px;
+            font-family: Poppins; 
+            font-size: 15px; 
+            font-weight: 200;
+            border: none;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            cursor: pointer; 
+            
+            /* Center button */
+            margin: auto;
+            display: block;
+        }
+
+        .blogbtn2:hover {
+            background-color: black; 
+            color: white; 
+            padding: 15px 20px;
+            font-family: Poppins; 
+            font-size: 15px;
+            font-weight: 200;
+            border: none;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            cursor: pointer; 
+            
+            /* Center button */
+            margin: auto;
+            display: block;
+        }
+
+        
+    /***** SECTION 10: BLOG PAGE END *****/
+
+
+    /***** SECTION 11: MAP SYSTEM PAGE *****/
+
+    #googleMap {
+        width: 50%; 
+        height: 400px; 
+        margin: auto; 
+        float: right;
+    }
+
+    .mapcontainer {
+        width: 100%; 
+        height: 400px; 
+        margin: auto; 
+    }
+
+    .scrollcontainer {
+        width: 50%; 
+        height:400px; 
+        float: left; 
+        margin: auto; 
+
+        /* Makes div have scroll bar */
+        overflow-x: hidden;
+        overflow-y: scroll;
+    }
+
+    .servbox {
+
+    }
+
+    /* .servbox:hover {
+        box-shadow: 0px 16px 30px 10px rgba(0,0,0,0.2);
+    } */
+
+    .servimg {
+        width: auto; 
+        height: 120px; 
+        margin-top: 20px;
+    }
+
+    .servtitle {
+        margin-top: 20px; 
+        margin-bottom: 30px; 
+        font-weight: 600; 
+        font-size: 20px;
+        color: #d9b338;
+        cursor: pointer;
+    }
+
+    .servtitle:hover {
+        margin-top: 20px; 
+        margin-bottom: 30px; 
+        font-weight: 600; 
+        font-size: 20px;
+        color: #e6c65e;
+        cursor: pointer;
+    }
+
+    .servdesc {
+        line-height: 1.8; 
+        margin-left: 20px; 
+        margin-right: 20px; 
+        margin-bottom: 15px; 
+        font-weight: 300;
+        white-space: normal;
+    }
+
+    /***** SECTION 11: MAP SYSTEM PAGE END *****/
+
+
+/* END - Stylesheet */ 
