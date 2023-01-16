@@ -68,7 +68,7 @@ function scrollFunction() {
     document.getElementsByClassName('topnav')[0].style.boxShadow = "0px 8px 16px 0px rgba(0,0,0,0.2)";
     document.getElementsByClassName('dropdown-content')[0].style.backgroundColor = "white";
     document.getElementsByClassName('dropdown-content')[0].style.opacity = "1";
-    document.getElementById('logoimg').src = "Logos/logo.png";
+    document.getElementById('logoimg').src = "Logos/logonew.png";
     document.getElementById('dropimg').src = "Images/drop.png";
       
   } else {
@@ -80,7 +80,7 @@ function scrollFunction() {
     document.getElementsByClassName('dropdown-content')[0].style.backgroundColor = "white";
     document.getElementsByClassName('dropdown-content')[0].style.opacity = "0.8";
     document.getElementsByClassName('dropdown-content')[0].style.color = "white";
-    document.getElementById('logoimg').src = "Logos/logowhite.png";
+    document.getElementById('logoimg').src = "Logos/logonewwhite.png";
     document.getElementById('dropimg').src = "Images/drop2.png";
   }
 }
